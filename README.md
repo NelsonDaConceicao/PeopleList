@@ -1,1 +1,2 @@
-Cette application permet de g�rer une liste de personnes
+# Outils de développement intégrés - PeopleList
+Cette application permet de gérer une liste de personnes
