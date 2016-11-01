@@ -25,6 +25,7 @@ public class PeopleListBean {
     }
     
     public List getPeopleList(){
-        return services.getPeopleList();
+        List test = services.getPeopleList();
+        return test;
     }   
 }

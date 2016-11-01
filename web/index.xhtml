@@ -1,12 +1,40 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <f:loadBundle basename="ch.hearc.ig.odi.peoplelist.presentation.bundle.Resources" var="resrc" />
+
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:dataTable value="#{peopleListBean.peopleList}" var="person">
+            <h:column>    				
+                <f:facet name="header"><h:outputText value="#{resrc.person_id}" /></f:facet>    				
+                    #{person.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header"><h:outputText value="#{resrc.person_gender}" /></f:facet>
+                    #{person.gender}
+            </h:column>
+            <h:column>
+                <f:facet name="header"><h:outputText value="#{resrc.person_firstName}" /></f:facet>
+                    #{person.firstName}
+            </h:column>
+            <h:column>
+                <f:facet name="header"><h:outputText value="#{resrc.person_lastName}" /></f:facet>
+                    #{person.lastName}
+            </h:column>
+            <h:column>
+                <f:facet name="header"><h:outputText value="#{resrc.person_married}" /></f:facet>
+                    #{person.married}
+            </h:column>
+            <h:column>
+                <f:facet name="header"><h:outputText value="#{resrc.person_birthDate}" /></f:facet>
+                    #{person.birthDate}
+            </h:column>
+        </h:dataTable>
     </h:body>
 </html>
 
