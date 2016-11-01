@@ -1,4 +1,4 @@
-package ch.hearc.ig.odi.peoplelist.service;
+package ch.hearc.ig.odi.peoplelist.business.beans;
 
 import ch.hearc.ig.odi.peoplelist.business.Person;
 import java.io.Serializable;

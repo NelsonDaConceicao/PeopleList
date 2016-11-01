@@ -5,8 +5,10 @@
  */
 package ch.hearc.ig.odi.peoplelist.business.beans;
 
+import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 /**
  *
@@ -15,11 +17,14 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "peopleListBean")
 @RequestScoped
 public class PeopleListBean {
-
+    @Inject Services services;
     /**
      * Creates a new instance of PeopleListBean
      */
     public PeopleListBean() {
     }
     
+    public List getPeopleList(){
+        return services.getPeopleList();
+    }   
 }
